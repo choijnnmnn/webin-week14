@@ -301,6 +301,11 @@
     </section>
 
    <script>
+
+               // GSAP가 무조건 3D 가속(GPU)을 쓰지 않도록 설정 (메모리 절약)
+        gsap.config({
+            force3D: false
+        });
         const lenis = new Lenis({
             duration: 1.2, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), direction: 'vertical', gestureDirection: 'vertical', smooth: true, mouseMultiplier: 1, smoothTouch: false, touchMultiplier: 2,
         });
@@ -575,4 +580,5 @@
 </body>
 
 </html>
+
 
